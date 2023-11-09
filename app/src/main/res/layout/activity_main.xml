@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+>
+
+    <LinearLayout
+            android:id="@+id/pdfLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:background="#FFFFFF">
+
+        <LinearLayout
+                android:id="@+id/topBar"
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FFFFFF">
+
+            <androidx.appcompat.widget.Toolbar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    android:theme="@android:style/Theme.Light"
+                    android:minHeight="?attr/actionBarSize"
+                    android:id="@+id/filename">
+
+                <Space
+                        android:layout_width="50dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1">
+                </Space>
+
+                <TextView
+                        android:text="file.pdf"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:id="@+id/name"
+                        android:textSize="18sp"/>
+            </androidx.appcompat.widget.Toolbar>
+
+            <View
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="#FFFFFF"/>
+
+            <androidx.appcompat.widget.Toolbar
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    android:theme="@android:style/Theme.Light"
+                    android:minHeight="?attr/actionBarSize"
+                    android:layout_gravity="end"
+                    android:id="@+id/toolbar">
+
+                <ImageButton
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:id="@+id/undo"
+                        android:background="@drawable/undo"/>
+
+                <ImageButton
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:id="@+id/redo"
+                        android:background="@drawable/redo"/>
+
+                <Space
+                        android:layout_width="50dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1">
+                </Space>
+
+                <ImageButton
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:id="@+id/pencil"
+                        android:background="@drawable/clickedpencil"/>
+
+                <ImageButton
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:id="@+id/highlighter"
+                        android:background="@drawable/highlighter"/>
+
+                <ImageButton
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:id="@+id/eraser"
+                        android:background="@drawable/eraser"/>
+
+                <Space
+                        android:layout_width="50dp"
+                        android:layout_height="1dp"
+                        android:layout_weight="1">
+                </Space>
+            </androidx.appcompat.widget.Toolbar>
+
+        </LinearLayout>
+        <androidx.appcompat.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#ffffff"
+                android:theme="@android:style/Theme.Light"
+                android:minHeight="?attr/actionBarSize"
+                android:id="@+id/statusbar">
+
+            <Space
+                    android:layout_width="50dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1">
+            </Space>
+
+            <ImageButton
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/previousPage"
+                    android:background="@drawable/previous"/>
+
+            <ImageButton
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:id="@+id/nextPage"
+                    android:background="@drawable/next"/>
+
+            <Space
+                    android:layout_width="20dp"
+                    android:layout_height="1dp"
+                    android:layout_weight="1">
+            </Space>
+
+            <TextView
+                    android:text="Page 0/0"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:id="@+id/pageNum"
+                    android:textSize="18sp"/>
+        </androidx.appcompat.widget.Toolbar>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
